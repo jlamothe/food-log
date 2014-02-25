@@ -12,4 +12,9 @@ public class AddLogActivity extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_log);
     }
+
+    public void onCancel(View view)
+    {
+        finish();
+    }
 }
