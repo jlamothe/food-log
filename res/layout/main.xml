@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    >
-<TextView
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:text="Hello World, MainActivity"
-    />
+              android:orientation="horizontal"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent" >
+    <View android:layout_weight="1"
+          android:layout_width="0dp"
+          android:layout_height="fill_parent" />
+    <LinearLayout android:orientation="vertical"
+                  android:layout_weight="4"
+                  android:layout_width="0dp"
+                  android:layout_height="fill_parent"
+                  android:gravity="center" >
+        <Button android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/add_log" />
+        <Button android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/inspect_logs" />
+    </LinearLayout>
+    <View android:layout_weight="1"
+          android:layout_width="0dp"
+          android:layout_height="fill_parent" />
 </LinearLayout>
-
