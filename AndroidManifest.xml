@@ -15,5 +15,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="net.jlamothe.foodlog.AddLogActivity"
+                  android:label="@string/add_log"
+                  android:parentActivityName="net.jlamothe.foodlog.MainActivity" >
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                       android:value="net.jlamothe.foodlog.MainActivity" />
+        </activity>
     </application>
 </manifest>

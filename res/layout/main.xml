@@ -13,7 +13,8 @@
                   android:gravity="center" >
         <Button android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/add_log" />
+                android:text="@string/add_log"
+                android:onClick="onAddLog" />
         <Button android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/inspect_logs" />

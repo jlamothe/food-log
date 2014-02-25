@@ -3,4 +3,7 @@
     <string name="app_name">Food Log</string>
     <string name="add_log">Add Log</string>
     <string name="inspect_logs">Inspect Logs</string>
+    <string name="log_description_hint">What did you eat?</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
 </resources>
