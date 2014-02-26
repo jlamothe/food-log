@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 import java.util.Date;
 
 public class AddLogActivity extends Activity
@@ -23,10 +24,15 @@ public class AddLogActivity extends Activity
         String description = textBox.getText().toString();
         String message = "You ate " + description + " on " + now.toString();
         Log log = new Log(now, message);
-        // TODO: save the log
-        Intent intent = new Intent(this, SaveNotificationActivity.class);
-        intent.putExtra(EXTRA_MESSAGE, message);
-        startActivityForResult(intent, 1);
+        if(Data.addLog(log)) {
+            Intent intent = new Intent(this, SaveNotificationActivity.class);
+            intent.putExtra(EXTRA_MESSAGE, message);
+            startActivityForResult(intent, 1);
+        }
+        else {
+            Toast toast = Toast.makeText(this, "Error saving log", Toast.LENGTH_SHORT);
+            toast.show();
+        }
     }
 
     public void onCancel(View view) {
