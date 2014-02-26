@@ -22,25 +22,16 @@ public class AddLogActivity extends Activity
         Date now = new Date();
         EditText textBox = (EditText) findViewById(R.id.add_log_description);
         String description = textBox.getText().toString();
-        String message = "You ate " + description + " on " + now.toString();
-        Log log = new Log(now, message);
+        Log log = new Log(now, description);
         if(Data.addLog(log)) {
-            Intent intent = new Intent(this, SaveNotificationActivity.class);
-            intent.putExtra(EXTRA_MESSAGE, message);
-            startActivityForResult(intent, 1);
+            Toast.makeText(this, "Log successfully saved", Toast.LENGTH_SHORT).show();
+            finish();
         }
-        else {
-            Toast toast = Toast.makeText(this, "Error saving log", Toast.LENGTH_SHORT);
-            toast.show();
-        }
+        else
+            Toast.makeText(this, "Error saving log", Toast.LENGTH_SHORT).show();
     }
 
     public void onCancel(View view) {
-        finish();
-    }
-
-    @Override
-    protected void onActivityResult(int code, int result, Intent data) {
         finish();
     }
 }

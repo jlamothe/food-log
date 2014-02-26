@@ -21,11 +21,5 @@
             <meta-data android:name="android.support.PARENT_ACTIVITY"
                        android:value="net.jlamothe.foodlog.MainActivity" />
         </activity>
-        <activity android:name="net.jlamothe.foodlog.SaveNotificationActivity"
-                  android:label="@string/save_notification_title"
-                  android:parentActivityName="net.jlamothe.foodlog.AddLogActivity" >
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                       android:value="net.jlamothe.foodlog.AddLogActivity" />
-        </activity>
     </application>
 </manifest>
