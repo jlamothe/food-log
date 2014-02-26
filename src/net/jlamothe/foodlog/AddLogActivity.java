@@ -12,14 +12,12 @@ public class AddLogActivity extends Activity
     public static final String EXTRA_MESSAGE = "net.jlamothe.foodlog.MESSAGE";
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_log);
     }
 
-    public void onSave(View view)
-    {
+    public void onSave(View view) {
         Date now = new Date();
         EditText textBox = (EditText) findViewById(R.id.add_log_description);
         String description = textBox.getText().toString();
@@ -31,14 +29,12 @@ public class AddLogActivity extends Activity
         startActivityForResult(intent, 1);
     }
 
-    public void onCancel(View view)
-    {
+    public void onCancel(View view) {
         finish();
     }
 
     @Override
-    protected void onActivityResult(int code, int result, Intent data)
-    {
+    protected void onActivityResult(int code, int result, Intent data) {
         finish();
     }
 }
