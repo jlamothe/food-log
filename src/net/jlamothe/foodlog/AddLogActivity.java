@@ -12,7 +12,7 @@ public class AddLogActivity extends Activity
     public static final String EXTRA_MESSAGE = "net.jlamothe.foodlog.MESSAGE";
 
     @Override
-    public void onCreate(Bundle savedInstanceState)
+    protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_log);
@@ -37,7 +37,7 @@ public class AddLogActivity extends Activity
     }
 
     @Override
-    public void onActivityResult(int code, int result, Intent data)
+    protected void onActivityResult(int code, int result, Intent data)
     {
         finish();
     }
