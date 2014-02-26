@@ -6,4 +6,6 @@
     <string name="log_description_hint">What did you eat?</string>
     <string name="save">Save</string>
     <string name="cancel">Cancel</string>
+    <string name="save_notification_title">Log Saved</string>
+    <string name="ok">OK</string>
 </resources>
