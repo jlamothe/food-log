@@ -19,7 +19,11 @@ public class AddLogActivity extends Activity
     public void onSave(View view) {
         Date now = new Date();
         EditText textBox = (EditText) findViewById(R.id.add_log_description);
-        String description = textBox.getText().toString();
+        String description = textBox.getText().toString().trim();
+        if(description.isEmpty()) {
+            Toast.makeText(this, "You must enter a description.", Toast.LENGTH_SHORT).show();
+            return;
+        }
         Log log = new Log(now, description);
         if(Data.addLog(log)) {
             Toast.makeText(this, "Log successfully saved", Toast.LENGTH_SHORT).show();
