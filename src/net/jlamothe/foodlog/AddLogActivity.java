@@ -10,8 +10,6 @@ import java.util.Date;
 
 public class AddLogActivity extends Activity
 {
-    public static final String EXTRA_MESSAGE = "net.jlamothe.foodlog.MESSAGE";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
