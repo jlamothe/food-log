@@ -2,6 +2,7 @@ package net.jlamothe.foodlog;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ListView;
 
 public class LogInspectorActivity extends Activity
@@ -13,5 +14,9 @@ public class LogInspectorActivity extends Activity
         LogAdapter adapter = new LogAdapter(this, Data.logs);
         ListView listView = (ListView) findViewById(R.id.log_inspector_list);
         listView.setAdapter(adapter);
+    }
+
+    public void onOk(View view) {
+        finish();
     }
 }
