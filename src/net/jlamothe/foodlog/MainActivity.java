@@ -18,4 +18,9 @@ public class MainActivity extends Activity
         Intent intent = new Intent(this, AddLogActivity.class);
         startActivity(intent);
     }
+
+    public void onInspectLogs(View view) {
+        Intent intent = new Intent(this, LogInspectorActivity.class);
+        startActivity(intent);
+    }
 }

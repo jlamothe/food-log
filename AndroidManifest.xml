@@ -21,5 +21,11 @@
             <meta-data android:name="android.support.PARENT_ACTIVITY"
                        android:value="net.jlamothe.foodlog.MainActivity" />
         </activity>
+        <activity android:name="net.jlamothe.foodlog.LogInspectorActivity"
+                  android:label="@string/inspect_logs"
+                  android:parentActivityName="net.jlamothe.foodlog.MainActivity" >
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                       android:value="net.jlamothe.foodlog.MainActivity" />
+        </activity>
     </application>
 </manifest>
