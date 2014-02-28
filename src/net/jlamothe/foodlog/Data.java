@@ -1,6 +1,8 @@
 package net.jlamothe.foodlog;
 
 import java.util.Vector;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 public class Data
 {
@@ -8,7 +10,14 @@ public class Data
 
     public static boolean addLog(Log log) {
         logs.add(log);
-        // TODO: save
+        return saveLogs();
+    }
+
+    public static boolean saveLogs() {
+        JSONArray array = new JSONArray();
+        for(Log log : logs)
+            array.put(log.toJSON());
+        // TODO: save the JSON data
         return true;
-    }    
+    }
 }
